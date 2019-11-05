@@ -15,3 +15,7 @@ app.listen(3000, function() {
 })
 
 //in express we handle the GET request with the get method
+
+app.get('/', function (reg, res){
+    res.send('Hello World')
+})
