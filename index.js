@@ -26,9 +26,10 @@ app.get('/', (reg, res) => {
     res.send('Hello World')
 })
 
-// gets
+// get sends the message to the client side
 //post puts message to the server
-// put 
+// put shows the message to the server
+//delete deletes the message
 
 app.get('/About', (reg, res) => {
     res.send('This is the About us Page')
