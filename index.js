@@ -10,12 +10,26 @@ const app = express();
 // we can do so with the listen method provided by the express
 // app should now be listening to port 3000 after this code is executed
 
-app.listen(3000, function() {
-    console.log('listening on 3000')
+app.listen(4000, function() {
+    console.log('listening on 4000')
 })
 
 //in express we handle the GET request with the get method
 
-app.get('/', function (reg, res){
+// app.get('/', function (reg, res){
+//     res.send('Hello World')
+// })
+
+
+//using the es6 method
+app.get('/', (reg, res) => {
     res.send('Hello World')
+})
+
+// gets
+//post puts message to the server
+// put 
+
+app.get('/About', (reg, res) => {
+    res.send('This is the About us Page')
 })
