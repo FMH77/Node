@@ -27,10 +27,36 @@ app.get('/', (reg, res) => {
 })
 
 // get sends the message to the client side
-//post puts message to the server
-// put shows the message to the server
+//post sends the message to the server
+// put does the editing
 //delete deletes the message
 
 app.get('/About', (reg, res) => {
     res.send('This is the About us Page')
 })
+
+app.post('/', (reg, res) => {
+    res.send('Got a POST request')
+})
+
+app.put('/', (reg, res) => {
+    res.send('Got a PUT request at /user')
+})
+
+app.delete('/user', (reg, res) => {
+    res.send('Got a DELETE request at /user')
+})
+
+// path parameters
+app.get('/users/:name', (reg, res) => {
+    res.send('Hello ' + reg.params.name)
+})
+
+
+//postman helps us test before we upload to the main site
+
+//an error page
+app.get('*', (reg,res)=>
+    {res.send("error")})
+    
+// node executes its code in sequence
