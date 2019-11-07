@@ -10,8 +10,8 @@ const app = express();
 // we can do so with the listen method provided by the express
 // app should now be listening to port 3000 after this code is executed
 
-app.listen(4000, function() {
-    console.log('listening on 4000')
+app.listen(3000, function() {
+    console.log('listening on 3000')
 })
 
 //in express we handle the GET request with the get method
@@ -50,6 +50,11 @@ app.delete('/user', (reg, res) => {
 // path parameters
 app.get('/users/:name', (reg, res) => {
     res.send('Hello ' + reg.params.name)
+})
+
+//more path parameters
+app.get('/users', (reg, res) => {
+    res.send('This is a class' + reg.query.class + 'cohort'+ reg.query.cohort)
 })
 
 
